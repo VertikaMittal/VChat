@@ -10,7 +10,7 @@ body{
 .container{
     width: 955px;
     background-color: blue;
-    height: 60vh;
+    height: 90vh;
     margin: auto;
 }
 .message{
