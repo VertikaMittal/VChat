@@ -3,12 +3,17 @@ const socket=io('http://localhost:8000')
 const form=document.getElementById("send_container");
 const messageInp=document.getElementById("msginp");
 const msgContainer=document.querySelector(".container");
+var audio=new Audio('tone.mp3');
 const append=(message,position)=>{
     const msgEle=document.createElement('div');
     msgEle.innerText=message;
     msgEle.classList.add('message');
     msgEle.classList.add(position);
     msgContainer.append(msgEle);
+    if(position=="left")
+    {
+        audio.play();
+    }
 }
 
 const userName=prompt("Enter your name to join");
